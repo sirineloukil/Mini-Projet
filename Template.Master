@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.Master.cs" Inherits="tp1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>ex 2</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 338px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style="width: 100%; height: 352px;">
+                <tr>
+                    <td class="auto-style1">
+                        <img alt="logo_enetcom" src="téléchargé.png" />
+                    </td>
+                    <td>
+                        <asp:Label ID="Label1" runat="server" Text="Label">Ecole Nationale d'Electronique et des Télécommunications de Sfax</asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style1">
+                        <asp:TreeView ID="TreeView1" runat="server" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged">
+                            <Nodes>
+                                <asp:TreeNode Text="Cours" Value="Cours">
+                                    <asp:TreeNode Text="Niveau 1" Value="Niveau 1"></asp:TreeNode>
+                                    <asp:TreeNode Text="Niveau 2" Value="Niveau 2"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="Etudiant" Value="Etudiant">
+                                    <asp:TreeNode Text="Nouveau Etudiant" Value="Nouveau Etudiant"></asp:TreeNode>
+                                    <asp:TreeNode Text="Liste Etudiant" Value="Liste Etudiant"></asp:TreeNode>
+                                </asp:TreeNode>
+                            </Nodes>
+                        </asp:TreeView>
+                    </td>
+                    
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+               
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+               
+            </table>
+        
+            
+        </div>
+        
+    </form>
+</body>
+</html>
